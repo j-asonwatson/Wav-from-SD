@@ -28,12 +28,6 @@ void loop(){
 long randomplay = random(1000,60000);
 delay(randomplay);
 tmrpcm.play("James.wav");
-
-//  if(Serial.available()){    
-//    if(Serial.read() == 'p'){ //send the letter p over the serial monitor to start playback
-//      tmrpcm.play("James.wav");
-//      Serial.write("boof!");
-//    }
-  
+ 
   
   } //end of void loop()
