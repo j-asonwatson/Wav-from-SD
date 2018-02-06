@@ -11,14 +11,14 @@ TMRpcm tmrpcm;   // create an object for use in this sketch
 void setup(){
 
   tmrpcm.speakerPin = 9; //5,6,11 or 46 on Mega, 9 on Uno, Nano, etc
-  //tmrpcm.setVolume(10);
+  //tmrpcm.setVolume(10); for use in the future
 
   Serial.begin(9600);
   if (!SD.begin(SD_ChipSelectPin)) {  // see if the card is present and can be initialized:
     Serial.println("SD fail");  
     return;   // don't do anything more if not
   }
-  //tmrpcm.play("James.wav"); //the sound file "James.wav" will play each time the arduino powers up, or is reset
+  tmrpcm.play("James.wav"); //the sound file "James.wav" will play each time the arduino powers up, or is reset
 }
 
 
